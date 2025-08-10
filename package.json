@@ -1,0 +1,38 @@
+{
+  "name": "barber-appointment-app",
+  "version": "1.0.0",
+  "description": "Multi-tenant SaaS platform for barber shop appointments",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend:dev": "cd frontend && npm run dev",
+    "build": "npm run backend:build && npm run frontend:build",
+    "backend:build": "cd backend && npm run build",
+    "frontend:build": "cd frontend && npm run build",
+    "start": "concurrently \"npm run backend:start\" \"npm run frontend:start\"",
+    "backend:start": "cd backend && npm start",
+    "frontend:start": "cd frontend && npm start",
+    "db:generate": "cd backend && npm run db:generate",
+    "db:migrate": "cd backend && npm run db:migrate",
+    "db:studio": "cd backend && npm run db:studio",
+    "setup": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "keywords": [
+    "barber",
+    "appointment",
+    "saas",
+    "booking",
+    "nextjs",
+    "express",
+    "prisma",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
